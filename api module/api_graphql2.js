@@ -7,6 +7,7 @@ const app=express();
 const schema=buildSchema(`
   type Query {
   message:String
+  student:Student
   }
   type Student{
   name:String
@@ -18,8 +19,8 @@ const schema=buildSchema(`
   const root={
    student:()=>{
     return {
-      name:himesh,
-      branch:cse,
+      name:"himesh",
+      branch:"cse",
       age:19
     };
    }
